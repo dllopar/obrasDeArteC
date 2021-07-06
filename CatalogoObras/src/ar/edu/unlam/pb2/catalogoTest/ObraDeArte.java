@@ -1,6 +1,6 @@
 package ar.edu.unlam.pb2.catalogoTest;
 
-public class ObraDeArte {
+public class ObraDeArte implements Comparable<ObraDeArte>{
 
 	private String nombre;
 	private Autor autor;
@@ -36,6 +36,12 @@ public class ObraDeArte {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	@Override
+	public int compareTo(ObraDeArte o) {
+		// TODO Auto-generated method stub
+		return this.nombre.compareTo(o.getNombre());
 	}
 	
 
